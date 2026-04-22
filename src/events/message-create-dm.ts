@@ -2,7 +2,11 @@ import { ChannelType, type Message } from "discord.js";
 import { appendMessage, getHistory } from "../conversation.js";
 import env from "../env.js";
 import { ollama } from "../ollama.js";
-import { buildSystemPrompt, extractPathway, runPathway } from "../pathways.js";
+import {
+	buildSystemPrompt,
+	extractPathway,
+	runPathway,
+} from "../pathways/index.js";
 
 export async function handleMessageCreateDm(message: Message): Promise<void> {
 	if (message.author.bot) return;
@@ -26,9 +30,7 @@ export async function handleMessageCreateDm(message: Message): Promise<void> {
 	const rawReply = aiMessage.content ?? "";
 	const pathway = extractPathway(rawReply);
 
-	const reply = pathway
-		? await runPathway(pathway, { userId })
-		: rawReply;
+	const reply = pathway ? await runPathway(pathway, { userId }) : rawReply;
 
 	appendMessage(userId, { role: "assistant", content: reply });
 
