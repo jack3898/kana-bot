@@ -2,6 +2,7 @@ import { Events, GatewayIntentBits } from "discord.js";
 import { Bot } from "./client.js";
 import * as decks from "./commands/decks/index.js";
 import * as invite from "./commands/invite/index.js";
+import * as ollama from "./commands/ollama/index.js";
 import env from "./env.js";
 import { handleInteractionCreateChatCommand } from "./events/interaction-create-chat-command.js";
 import { handleReady } from "./events/ready.js";
@@ -17,5 +18,6 @@ await client.login(env.DISCORD_TOKEN);
 
 client.registerSlashCommand(invite);
 client.registerSlashCommand(decks);
+client.registerSlashCommand(ollama);
 
 await client.publishSlashCommands();

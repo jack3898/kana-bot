@@ -1,7 +1,7 @@
 {
-    "compilerOptions": {
-        "strict": true,
-        "erasableSyntaxOnly": true,
-        "module": "nodenext"
-    }
+	"compilerOptions": {
+		"strict": true,
+		"erasableSyntaxOnly": true,
+		"module": "nodenext"
+	}
 }
