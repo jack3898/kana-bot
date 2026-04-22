@@ -1,6 +1,7 @@
 import { Events, GatewayIntentBits } from "discord.js";
 import { Bot } from "./client.js";
-import * as challenge from "./commands/invite/index.js";
+import * as decks from "./commands/decks/index.js";
+import * as invite from "./commands/invite/index.js";
 import env from "./env.js";
 import { handleInteractionCreateChatCommand } from "./events/interaction-create-chat-command.js";
 import { handleReady } from "./events/ready.js";
@@ -14,6 +15,7 @@ client.on(Events.InteractionCreate, handleInteractionCreateChatCommand);
 
 await client.login(env.DISCORD_TOKEN);
 
-client.registerSlashCommand(challenge);
+client.registerSlashCommand(invite);
+client.registerSlashCommand(decks);
 
 await client.publishSlashCommands();

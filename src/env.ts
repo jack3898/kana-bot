@@ -4,6 +4,7 @@ const EnvSchema = z.object({
 	DISCORD_TOKEN: z.string(),
 	DISCORD_APPLICATION_ID: z.string(),
 	DISCORD_GUILD_ID: z.string(),
+	ANKI_URL: z.string().url(),
 });
 
 export type Env = z.output<typeof EnvSchema>;
