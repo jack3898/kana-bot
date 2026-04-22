@@ -1,18 +1,25 @@
-import { Events, GatewayIntentBits } from "discord.js";
+import { Events, GatewayIntentBits, Partials } from "discord.js";
 import { Bot } from "./client.js";
 import * as decks from "./commands/decks/index.js";
 import * as invite from "./commands/invite/index.js";
 import * as ollama from "./commands/ollama/index.js";
 import env from "./env.js";
 import { handleInteractionCreateChatCommand } from "./events/interaction-create-chat-command.js";
+import { handleMessageCreateDm } from "./events/message-create-dm.js";
 import { handleReady } from "./events/ready.js";
 
 const client = new Bot({
-	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.DirectMessages],
+	intents: [
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.DirectMessages,
+		GatewayIntentBits.MessageContent,
+	],
+	partials: [Partials.Channel, Partials.Message],
 });
 
 client.once(Events.ClientReady, handleReady);
 client.on(Events.InteractionCreate, handleInteractionCreateChatCommand);
+client.on(Events.MessageCreate, handleMessageCreateDm);
 
 await client.login(env.DISCORD_TOKEN);
 

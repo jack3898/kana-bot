@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       discord.js:
-        specifier: ^14.26.3
-        version: 14.26.3
+        specifier: 14.26.1
+        version: 14.26.1
       ollama:
         specifier: ^0.6.3
         version: 0.6.3
@@ -289,9 +289,6 @@ packages:
   '@types/node@24.12.2':
     resolution: {integrity: sha512-A1sre26ke7HDIuY/M23nd9gfB+nrmhtYyMINbjI1zHJxYteKR6qSMX56FsmjMcDb3SMcjJg5BiRRgOCC/yBD0g==}
 
-  '@types/node@25.6.0':
-    resolution: {integrity: sha512-+qIYRKdNYJwY3vRCZMdJbPLJAtGjQBudzZzdzwQYkEPQd+PJGixUL5QfvCLDaULoLv+RhT3LDkwEfKaAkgSmNQ==}
-
   '@types/ws@8.18.1':
     resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
 
@@ -302,8 +299,8 @@ packages:
   discord-api-types@0.38.47:
     resolution: {integrity: sha512-XgXQodHQBAE6kfD7kMvVo30863iHX1LHSqNq6MGUTDwIFCCvHva13+rwxyxVXDqudyApMNAd32PGjgVETi5rjA==}
 
-  discord.js@14.26.3:
-    resolution: {integrity: sha512-XEKtYn28YFsiJ5l4fLRyikdbo6RD5oFyqfVHQlvXz2104JhH/E8slN28dbky05w3DCrJcNVWvhVvcJCTSl/KIg==}
+  discord.js@14.26.1:
+    resolution: {integrity: sha512-yF+/myEVweJg2lENRt+b1SmsovmEKxPoaY5DILBfnIb5dnhw+J6RvdmvUPxUH32jmPB34gnPnymLji8w75bwVA==}
     engines: {node: '>=18'}
 
   esbuild@0.27.7:
@@ -355,9 +352,6 @@ packages:
 
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
-
-  undici-types@7.19.2:
-    resolution: {integrity: sha512-qYVnV5OEm2AW8cJMCpdV20CDyaN3g0AjDlOGf1OW4iaDEx8MwdtChUp4zu4H0VP3nDRF/8RKWH+IPp9uW0YGZg==}
 
   undici@6.24.1:
     resolution: {integrity: sha512-sC+b0tB1whOCzbtlx20fx3WgCXwkW627p4EA9uM+/tNNPkSS+eSEld6pAs9nDv7WbY1UUljBMYPtu9BCOrCWKA==}
@@ -560,19 +554,15 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/node@25.6.0':
-    dependencies:
-      undici-types: 7.19.2
-
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 25.6.0
+      '@types/node': 24.12.2
 
   '@vladfrangu/async_event_emitter@2.4.7': {}
 
   discord-api-types@0.38.47: {}
 
-  discord.js@14.26.3:
+  discord.js@14.26.1:
     dependencies:
       '@discordjs/builders': 1.14.1
       '@discordjs/collection': 1.5.3
@@ -655,8 +645,6 @@ snapshots:
   typescript@6.0.3: {}
 
   undici-types@7.16.0: {}
-
-  undici-types@7.19.2: {}
 
   undici@6.24.1: {}
 
