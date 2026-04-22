@@ -1,6 +1,6 @@
 import { Client, Collection, REST, Routes } from "discord.js";
-import env from "./env";
-import type { Command } from "./types";
+import env from "./env.js";
+import type { Command } from "./types.js";
 
 export class Bot extends Client {
 	readonly commands = new Collection<PropertyKey, Command>();

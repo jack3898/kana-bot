@@ -2,7 +2,7 @@ import {
 	type ChatInputCommandInteraction,
 	SlashCommandBuilder,
 } from "discord.js";
-import env from "../../env";
+import env from "../../env.js";
 
 export const definition = new SlashCommandBuilder()
 	.setName("invite")

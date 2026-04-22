@@ -1,9 +1,9 @@
 import { Events, GatewayIntentBits } from "discord.js";
-import { Bot } from "./client";
-import * as challenge from "./commands/invite";
-import env from "./env";
-import { handleInteractionCreateChatCommand } from "./events/interaction-create-chat-command";
-import { handleReady } from "./events/ready";
+import { Bot } from "./client.js";
+import * as challenge from "./commands/invite/index.js";
+import env from "./env.js";
+import { handleInteractionCreateChatCommand } from "./events/interaction-create-chat-command.js";
+import { handleReady } from "./events/ready.js";
 
 const client = new Bot({
 	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.DirectMessages],
